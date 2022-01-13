@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int validate();
+
+void main(){
+    
+    int x;
+    
+    
+    do{
+        
+    x = validate();
+    
+        printf("\nValor de x = %d",x);
+        
+    }while(x == -1);
+    
+    printf("\nHas introducido el %d",x); 
+    
+}
+
+int validate(){
+    
+    int x,i = 0;
+    
+    do{
+        
+    printf("\nIntroduce un numero entre 10 y 5000 : ");
+    
+    scanf("%d",&x);
+    
+    i++;
+    
+    
+    }while( x > 5000 || x < 10 && i != 3);
+    
+    
+    if(x < 10 || x > 5000){
+        
+        return -1;
+    }
+    
+    return x;
+}
