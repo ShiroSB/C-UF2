@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int validate();
+
+int res();
+
+void main()
+{
+    int x,;
+  
+    x = res();
+    
+}
+
+int validate(){
+    
+    int x;
+    
+    do{
+        
+        scanf("%d",&x);
+        
+    }while(x < 0 || x > 11);
+    
+    return x;
+    
+}
+
+int res(){
+    
+    int x,i=1,suspensos = 0,aprobados = 0,SNA = 0,SNS = 0;
+    
+        
+        do{
+            
+        printf("Introduce la nota Nº %d: ",i++);
+        
+        x = validate();
+        
+        if(x >= 5){
+            
+            aprobados++;
+            SNA += x;
+            
+        }else{
+            
+            suspensos++;
+            SNS += x;
+        }
+        
+        }while(i != 16);
+        
+        printf("Cantidad de aprobados : [%d]\n",aprobados);
+        printf("Cantidad de suspendidos : [%d]\n",suspensos);
+        printf("Nota media aprobados : [%d]\n",SNA / aprobados);
+        printf("Nota media suspendidos : [%d]",SNS / suspensos);
+    
+    
+}
