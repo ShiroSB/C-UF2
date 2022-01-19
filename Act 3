@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int binario();
+
+void main(){
+
+    int x,y,z;
+
+    x = binario();
+    
+    printf("Numero en binario : %d",x);
+
+
+}
+
+int binario(){
+
+	int rem = 1,count = 1,bin = 0,num;
+	
+    printf("Introduce un numero : ");
+    
+    scanf("%d",&num);
+	
+	while(num != 0){
+	    
+		rem = num % 2;
+		
+		num = num / 2;
+		
+		bin = bin + rem * count;
+		
+		count = count * 10;
+		
+	}
+	
+	return bin;
+
+}
