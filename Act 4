@@ -6,9 +6,14 @@ int res();
 
 void main()
 {
-    int x,;
-  
+    int x,i = 0;
+    
+        
+ 
+    
     x = res();
+    
+    
     
 }
 
@@ -17,6 +22,8 @@ int validate(){
     int x;
     
     do{
+        
+        printf("Introduce la nota: ");
         
         scanf("%d",&x);
         
@@ -33,21 +40,21 @@ int res(){
         
         do{
             
-        printf("Introduce la nota Nº %d: ",i++);
-        
-        x = validate();
-        
-        if(x >= 5){
+            x = validate();
             
-            aprobados++;
-            SNA += x;
+            if(x >= 5){
+                
+                aprobados++;
+                SNA += x;
+                
+            }else{
+                
+                suspensos++;
+                SNS += x;
+            }
             
-        }else{
+            i++;
             
-            suspensos++;
-            SNS += x;
-        }
-        
         }while(i != 16);
         
         printf("Cantidad de aprobados : [%d]\n",aprobados);
