@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int conver();
+
+void main()
+{
+
+    int x;
+
+    x = conver();
+    
+    if(x == 1){
+        
+        printf("Es primo");
+        
+    }else{
+        
+        printf("No es primo");
+        
+    }
+
+}
+
+int conver(){
+    
+    int x,i,contadorDiv = 0,rmodulo;
+    
+    printf("Introduce un numero : ");
+    
+    scanf("%d",&x);
+    
+    for(i = 1 ; i != x ; i++){
+        
+        rmodulo = x % i; 
+            
+        if(rmodulo == 0){
+            
+            contadorDiv++;
+            
+        }
+        
+    }
+                
+    if(contadorDiv > 2 || x == 4){
+            
+        return 0;
+            
+    }else{
+        
+        return 1;
+        
+    }
+    
+    
+}
