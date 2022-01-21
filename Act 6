@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int VLX();
+
+void main(){
+    
+    int x,suma = 0,i;
+
+    x = VLX();
+    
+    for(i = 0 ; i < x ; i++){
+        
+        if(suma  + i < x){
+            
+        suma += i;
+        
+        printf("[%d]",i);
+        
+        }
+ 
+    }
+    
+    printf("\n%d",suma);
+        
+}
+
+
+int VLX(){
+    
+    int x;
+    
+    printf("Introduce el numero : ");
+    
+    scanf("%d",&x);
+    
+    return x;
+    
+}
