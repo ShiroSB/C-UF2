@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int VLX();
+
+int VLI();
+
+void main(){
+    
+    int x,i,aux;
+    
+    x = VLX();
+    
+    i = VLI();
+    
+    aux = x;
+    
+    x = i;
+    
+    i = aux;
+    
+    printf("Valor de x : [%d] y de i : [%d]",x,i);
+ 
+}
+
+
+int VLX(){
+    
+    int x;
+    
+    printf("Introduce el valor de x : ");
+    
+    scanf("%d",&x);
+    
+    return x;
+    
+}
+
+int VLI(){
+    
+    int i;
+    
+    printf("Introduce el valor de i : ");
+    
+    scanf("%d",&i);
+    
+    return i;
+    
+}
