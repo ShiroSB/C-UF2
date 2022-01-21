@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int ELV();
+
+int VLX();
+
+void main(){
+    
+    int x,y,res;
+    
+
+    x = VLX();
+    
+    y = VLX();
+    
+    res = ELV(x,y);
+    
+    printf("Valor elevado : [%d]",res);
+ 
+}
+
+int VLX(){
+    
+    int x;
+    
+    printf("Introduce el valor de x : "),
+    
+    scanf("%d",&x);
+    
+    return x;
+    
+}
+
+int ELV(int x,int y){
+    
+    int aux,i;
+    
+    aux = x;
+    
+    for( i = 1 ; i < y ; i++){
+            
+            x = x * aux;
+            
+        }
+        
+        
+    if(y == 0){
+        
+        return 0;
+        
+    }else{
+        
+        return x;
+        
+    }
+        
+}
