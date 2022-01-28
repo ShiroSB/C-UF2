@@ -1,3 +1,0 @@
-int VLT();
-
-int VLTTMN();
