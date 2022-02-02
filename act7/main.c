@@ -1,37 +1,62 @@
-//Aviso a mi aficion, he borrado sin querer el main.c y por eso no lo tengo siuuu
-
 #include <stdio.h>
 #include "functions.h"
 
-int VLT(){
-    
-    int i = 0;
-    
-    int arr[i];
-    
-    do{
-    
-    printf("Introduce los datos : ");
-        
-    scanf("%d",&arr[i]);
+void main(){
 
-    }while(arr[i] < 0 || arr[i] > 10);
-    
-    return arr[i];
-        
-}
+    int i = 0,TMN,max = 0,min = 10,aux,j = 0;
 
-int VLTTMN(){
-    
-    int x;
-    
-    do{
-    
-    printf("Tamaño del array : ");
-    
-    scanf("%d",&x);
-    
-    }while(x < 1 || x > 50);
-    
-    return x;
+    float suma = 0;
+
+    TMN = VLTTMN();
+
+    int arr[TMN];
+
+    for(i = 0 ; i < TMN ; i++){
+
+        arr[i] = VLT();
+
+        suma += arr[i];
+
+    }
+
+    for(i = 0 ; i < TMN ; i++){
+
+    if(arr[i] > max){
+        max = arr[i];
+    }
+    if(arr[i] < min)
+        min = arr[i];
+    }
+
+    for(i = 0 ; i < TMN -1 ; i++){
+        for( j = i + 1 ; j < TMN ; j++){
+
+            if(arr[i] > arr[j]){
+
+                aux = arr[i];
+
+                arr[i] = arr[j];
+
+                arr[j] = aux;
+
+            }
+
+        }
+
+    }
+
+    printf("\nValor maximo : %d",max);
+
+    printf("\nValor minimo : %d",min);
+
+    printf("\nMedia : %f",suma / TMN);
+
+    printf("\n");
+
+    for( i = 0 ; i < TMN ; i++){
+
+        printf("[%d]",arr[i]);
+
+    }
+
 }
