@@ -1,3 +1,5 @@
+//Aviso a mi aficion, he borrado sin querer el main.c y por eso no lo tengo siuuu
+
 #include <stdio.h>
 #include "functions.h"
 
