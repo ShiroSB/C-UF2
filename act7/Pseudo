@@ -1,0 +1,92 @@
+function
+
+	var
+
+		INTEGER i:=0,TMN,max:=0,min:=10,aux;
+		FLOAT suma:=0;
+
+	endvar
+
+		TMN := VLTTMN();
+
+	var 
+
+		INTEGER arr[TMN];
+
+	endvar
+
+	for i := 0 to TMN do
+
+		arr[i] := VLT();
+		suma += arr[i];
+		i := i + 1;
+
+	endfor
+
+	for i := 0 to TMN do
+
+		if arr[i] > max then
+		
+			max := arr[i];
+
+		endif
+
+		if arr[i] < min then
+
+			min := arr[i];
+		endif
+		
+		i := i + 1;
+
+	endfor
+
+	for i := 0 to TMN 
+
+		WRITE arr[i];
+
+	endfor
+	
+
+endfunction
+
+
+function(VLT)
+	
+	var
+
+		INTEGER i := 0;
+		INTEGER arr[i];
+
+	endvar
+
+	do
+
+		WRITE "Introduce los datos";
+
+		READ arr[i];
+
+	while arr[i] < 0 OR arr[i] > 10;
+
+	return arr[i];
+	
+endfunction
+
+function(VLTTMN)
+
+	var
+
+		INTEGER x;
+
+	endvar
+
+	do
+
+		WRITE "Tamaño del array : ";
+
+		READ x;
+
+	while x < 1 OR x > 50;
+
+	return x;
+
+endfunction
