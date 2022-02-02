@@ -1,0 +1,31 @@
+#include <stdio.h>
+#define TMN 100
+int main()
+{
+    
+int i,vector[TMN];
+
+    for(i = 0; i <= TMN ; i++){
+        
+        if(i % 2 == 0 && i != 0){
+            
+            vector[i] = i;
+            
+        }
+        
+    }
+    
+    for(i = 0; i <= TMN ; i++){
+        
+            printf("\n");
+            
+            if(i % 2 == 0  && i != 0){
+                
+                printf("Valor = %d",vector[i]);
+                
+            }
+            
+    }
+    
+    
+}
