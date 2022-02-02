@@ -1,0 +1,34 @@
+#include <stdio.h>
+//En vez de poner el 100, puedes definir una constante con ese valor
+//Pedia usar un vector, que lo rellenaras y luego lo mostraras, cosa que tu solo haces prints
+//Ademas he arreglado mas cosas
+
+#define TMN 100
+
+int main()
+{
+    int num,array[TMN];
+
+    for ( num = 0 ; num <= TMN ; num++){
+        
+        
+        if(num % 2 == 0 && num != 0){
+            
+            array[num] = num;
+            
+        }
+        
+    }
+
+    for(num = 0; num <= TMN ; num++){
+            
+            if(num % 2 == 0  && num != 0){
+                
+                printf("[%d]",array[num]);
+                
+            }
+            
+    }
+    
+    
+}
