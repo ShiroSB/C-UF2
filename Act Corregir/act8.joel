@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include "functions.h"
+// EJERCICIO 8
+void main() {
+    int num1, num2, result = 1, count = 1;
+    num1 = validate();
+    num2 = validate();
+    
+    // Aqui en vez de poner el do while podrias haber puesto otra funcion, como la que he puesto al final del codgio
+    
+    do{
+    	result = result * num1;
+        count++;
+    }while(count <= num2);
+    printf("El resultado es igual a: %d", result);
+    
+}
+
+/*int ELV(int x,int y){
+    
+    int aux,i;
+    
+    aux = x;
+    
+    for( i = 1 ; i < y ; i++){
+            
+            x *= aux;
+            
+        }
+        
+        
+    if(y == 1){
+        
+        return aux;
+        
+    }else{
+        
+        return x;
+        
+    }
+*/
