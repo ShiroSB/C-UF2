@@ -1,4 +1,4 @@
-def vlt_num():
+def validate_num():
 
     i = 0
     x = 0
