@@ -12,13 +12,30 @@ def read_file(fname):
     
 def write_file(fname):
     
+    maximo = 10
+    
     frase = input(TEXTO1)
     
-    file = open(fname,'w')
+    if len(frase) > maximo:
+        
+        while len(frase) > maximo:
+        
+            frase = input(TEXTO1)
+        
+            file = open(fname,'w')
+        
+            file.write(frase)
+        
+            file.close()
+        
+    else:
     
-    file.write(frase)
+        file = open(fname,'w')
+        
+        file.write(frase)
+        
+        file.close()
     
-    file.close()
     
 def def_ruta():
     
