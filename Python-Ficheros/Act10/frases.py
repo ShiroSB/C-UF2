@@ -1,0 +1,6 @@
+FRASE1 = "Introduce tu identificador: "
+FRASE2 = "Introduce el grupo/cantante: "
+FRASE3 = "Introduce el nombre de la cancion: "
+FRASE4 = "Introduce la fecha: "
+FRASE5 = "Introduce el numero de visualizaciones: "
+FRASE6 = "Cuantos videos quieres introducir : "
