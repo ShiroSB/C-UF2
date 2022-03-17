@@ -27,14 +27,14 @@ def pedir_datos(x):
         dbfunctions.insert_data(identificador, cantante, cancion, fecha, visualizaciones)
 
         musica = {
-            "identificador":[identificador],
-            "cantante":[cantante],
-            "cancion":[cancion],
-            "fecha":[fecha],
-            "visualizaciones":[visualizaciones]
+            "identificador":identificador,
+            "cantante":cantante,
+            "cancion":cancion,
+            "fecha":fecha,
+            "visualizaciones":visualizaciones
         }
         write_CSV(musica)
-        print_panda(musica)
+        print_panda([musica])
 
 def print_panda(musica):
     panda = pd.DataFrame(musica)
