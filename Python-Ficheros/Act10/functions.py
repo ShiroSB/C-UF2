@@ -8,9 +8,20 @@ def pedir_datos(x):
     write_header()
     for i in range(x):
         identificador = int(input(fr.FRASE1))
+        while identificador <= 0:
+            identificador = int(input(fr.FRASE1))
         cantante = input(fr.FRASE2)
         cancion = input(fr.FRASE3)
-        fecha = input(fr.FRASE4)
+        dia = int(input(fr.DIA))
+        while dia < 0 or dia > 31:
+            dia = int(input(fr.DIA))
+        mes = int(input(fr.MES))
+        while mes < 1 or mes > 12:
+            mes = int(input(fr.MES))
+        año = int(input(fr.YEAR))
+        while año < 1900 or año > 2022:
+            año = int(input(fr.YEAR))
+        fecha = str(dia) + "/" + str(mes) + "/" + str(año)
         visualizaciones = int(input(fr.FRASE5))
         dbfunctions.create_table()
         dbfunctions.insert_data(identificador, cantante, cancion, fecha, visualizaciones)
